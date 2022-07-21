@@ -1,0 +1,13 @@
+PARA RODAR: python manage.py runserver
+PARA RODAR O MIGRATE: python manage.py migrate
+
+ADMIN USER: g.trindade
+ADMIN PASSW: Giba1201
+
+ADMIN USER: gtrindade
+ADMIN PASSW: Giba1201
+
+USER: giba
+PASSW: Giba1201
+
+IMPLEMENTAR CRUD

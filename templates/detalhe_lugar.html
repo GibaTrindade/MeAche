@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container">
+	<div class="row">
+	    <div class="col">
+	      
+	    </div>
+	    <div class="col">
+	      <h3><span class="badge badge-secondary">{{ lugar.nome }}</span></h3>
+	    </div>
+	    <div class="col">
+	      
+	    </div>
+
+	</div>
+	<div class="row mr-0 ml-0">
+	  
+	  {% for comodo in comodos %}
+	  <div class="col-sm-4 mt-3">
+	    <div class="card">
+	      <div class="card-body">
+	        <h5 class="card-title"><a href="{% url 'detalhe_comodo' pk=comodo.pk %}">{{forloop.counter}}. {{ comodo.nome }}</a></h5>
+	        <p class="card-text">Descrição:{{ comodo.descricao }}</p>
+	        
+	      </div>
+	    </div>
+	  </div>
+	  {% endfor %}
+	</div>
+</div>
+
+{% endblock content %}

@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container">
+	<div class="row">
+	    <div class="col">
+	    </div>
+	    <div class="col">
+	      <h3><span class="badge badge-secondary">Lista de Objetos</span></h3>
+	    </div>
+	    <div class="col">
+	    </div>
+	</div>
+		<table class="table table-striped">
+		  <thead>
+		    <tr>
+		      <th scope="col">#</th>
+		      <th scope="col">Lugar</th>
+		      <th scope="col">Cômodo</th>
+		      <th scope="col">Compartimento</th>
+		      <th scope="col">Objeto</th>
+		      <th scope="col">Transferir Objeto</th>
+		    </tr>
+		  </thead>
+		  <tbody>
+		  {% for objeto in objetos %}	
+		    <tr>
+		      <th scope="row">{{forloop.counter}}</th>
+		      <td>{{ objeto.compartimento.comodo.lugar }}</td>
+		      <td>{{ objeto.compartimento.comodo }}</td>
+		      <td>{{ objeto.compartimento }}</td>
+		      <td>{{ objeto.nome }}</td>
+		      <td><a href="{% url 'transfere_objeto' pk=objeto.pk %}" class="btn btn-primary">Transferir Objeto</a></td>
+		    </tr>
+		  {% endfor %}
+		  </tbody>
+		</table>
+</div>
+
+{% endblock content %}
